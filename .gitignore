@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+renv/
+renv.lock
+.Rprofile
+=======
+renv.lock
+renv/
+.Rprofile
+ARCHIVE
+>>>>>>> fa8284bc407769da82e663b3ba503fe495d237dc

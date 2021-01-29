@@ -1,0 +1,15 @@
+Package: tidyProt
+Title: tidy statistical analysis of protein mass spectrometry
+Version: 0.0.1.0000
+Authors@R:
+    person(given = "Tyler",
+           family = "Bradshaw",
+           role = c("aut", "cre"),
+           email = "twesleyb10@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: protein-level statistical testing using linear models
+License: GNU3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
