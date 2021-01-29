@@ -12,7 +12,7 @@ normSL <- function(tp) {
 	  dplyr::summarize(Total = sum(Intensity, na.rm=TRUE), 
 			   .groups="drop") %>%
           # calculate normalization factors
-          dplyr::mutate(mean = mean(sample_sums$Total)) %>%
+          dplyr::mutate(mean = mean(Total)) %>%
 	  dplyr::mutate(normFactor = mean / Total) %>%
 	  dplyr::mutate(norm = Total * normFactor)
   # collect normalization factors as named vector
