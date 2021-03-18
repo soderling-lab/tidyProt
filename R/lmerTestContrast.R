@@ -54,7 +54,7 @@ lmerTestContrast <- function(fm, contrast,
   # compute scaled variance-covariance matrix
   vcov <- as.matrix(model_summary$vcov) # == vcov(fm) == fm@vcov_beta
 
-  # compute 
+  # compute standard error^2
   se2 <- as.numeric(contrast %*% vcov %*% contrast) # == variance
 
   # extract asymtoptic var-covar matrix from fit model
@@ -73,7 +73,7 @@ lmerTestContrast <- function(fm, contrast,
   s2_post <- (s2_prior * df_prior + s2 * s2_df) / (df_prior + s2_df)
 
   # compute variance given s2_post
-  vcov_post <- unscaled_vcov * s2_post # sace as vcov
+  vcov_post <- unscaled_vcov * s2_post # same as vcov
   variance <- as.numeric(contrast %*% vcov_post %*% contrast)
 
   # compute fold change and the t-statistic [lmerTest eq 11]
