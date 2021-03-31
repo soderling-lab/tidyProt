@@ -27,5 +27,5 @@ See the \code{getContrast} function to create a contrast.
 }}
 }
 \description{
-assess a contrast for a given linear model as fit by lm
+assess a contrast for a given linear model as fit by \code{lm}
 }
