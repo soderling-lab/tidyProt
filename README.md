@@ -1,12 +1,13 @@
 # tidyProt
 
 ## Installation
-To install the `tidyProt` package, type the following into an R console:
+To install the `tidyProt` package, type the following into an R console:  
 `devtools::install_github("soderling-lab/tidyProt")`.
 
 
 ## Key Dependencies
-Insure you have installed the following R packages:
+Beforing installing `tidyProt`, insure that you have installed the following R
+packages:
 
 * lmerTest `install.packages("lmerTest")`
 * dplyr `install.packages("dplyr")`
