@@ -6,6 +6,50 @@
 \usage{
 lmerTestContrast(fm, contrast, df_prior = 0, s2_prior = 0)
 }
+\arguments{
+\item{fm}{\itemize{
+\item linear mixed model fit by \code{lmerTest::lmer}.
+}}
+
+\item{contrast}{\itemize{
+\item a vector indicating a contrast between model coefficients.
+See the \code{getContrast} function to create a contrast.
+}}
+
+\item{df_prior}{\itemize{
+\item prior degrees of freedom for moderated comparison; see also
+\code{limma::squeezeVar} to compute prior degrees of freedom.
+}}
+
+\item{s2_prior}{\itemize{
+\item prior sigma squared for moderated comparison; see also
+\code{limma::squeezeVar} to compute prior sigma squared.
+}}
+}
+\value{
+a data.table giving the result of the model-based comparison,
+contains the following columns:
+\itemize{
+\item{Contrast - }{A vector defining a comparison between positive
+and negative coefficients in a model. See also, \code{getContrast}.}
+\item{log2FC - }{The fold change estimated from the fit model.}
+\item{percentControl}{The fold-change converted to a percentage of the
+control.}
+\item{SE - }{The standard error of the comparison computed as the square
+root of the variance.}
+\item{Tstatistic - }{The t-statistic for the comparison, calculated using
+equation 11 from Kuznetsova et al., 2017.}
+\item{Pvalue - }{The p-value for the comparison, calculated from the t-value
+and degrees of freedom using the student's t-distribution, \code{pt}.}
+\item{DF - }{The degrees of freedom estimated via the Satterthwaite method,
+see the lmerTest package and Kuznetsova et al., 2017 for more information
+\code{citation("lmerTest")}.}
+\item{S2 - }{sigma squared -- the estimated standard deviation of the errors
+or residual standard deviation (sigma) squared -- see also \code{?sigma}.}
+\item{isSingular - }{logical indicating whether or not the model is a
+singular fit-- see also \code{?lme4::isSingular}. If \code{TRUE} this indicates that
+one or more of the model's parameters explains little to no variance.}
+}
 \description{
-lmerTestContrast
+evaluate model-based comparison given a linear mixed-model as fit by lmerTest
 }
