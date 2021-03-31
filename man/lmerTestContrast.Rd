@@ -26,6 +26,34 @@ See the \code{getContrast} function to create a contrast.
 \code{limma::squeezeVar} to compute prior sigma squared.
 }}
 }
+\value{
+a \code{data.frame} containing the result for the comparison and the
+following columns:
+
+\code{Contrast} - indicates the comparison between model coefficients.
+
+\code{log2FC} - the fold change estimated from the fit model.
+
+\code{percentControl} - the fold-change converted to a percent relative to
+the control (positive) coefficient.
+
+\code{SE} - the standard error of the comparison computed as the square
+root of the variance.
+
+\code{Tstatistic} - the t-statistic for the comparison, calculated using
+equation (11) from Kuznetsova et al., 2017.
+
+\code{Pvalue} - the p-value for the comparison, calculated from the t-value
+and degrees of freedom using the student's t-distribution, \code{pt}.
+
+\code{DF} - the degrees of freedom for the comparison.
+
+\code{S2} - sigma squared -- the estimated standard deviation of the errors
+or residual standard deviation (sigma) squared -- see also \code{?sigma}.
+
+\code{isSingular} - see also \code{lme4::isSingular}. If \code{TRUE} this indicates
+that one or more of the model's parameters explains little to no variance.
+}
 \description{
 evaluate model-based comparison given a linear mixed-model as fit by lmerTest
 }
