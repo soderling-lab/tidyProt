@@ -1,13 +1,17 @@
 #' lmTestContrast
 #'
-#' assess a contrast for a given linear model as fit by `lm`
+#' assess a contrast for a given linear model as fit by lm
 #'
 #' @param fm - fit linear model 
+#'
 #' @param contrast - a vector indicating a contrast between model coefficients.
 #' See the `getContrast` function to create a contrast.
+#'
 #' @param df_prior - prior degrees of freedom for moderated comparison; see also
 #' `limma::squeezeVar` to compute prior degrees of freedom.
+#'
 #' @param s2_prior - prior sigma squared for moderated comparison; see also 
+#'
 #' @returns a data.table giving the result of the model-based comparison,
 #' contains the following columns:
 #' \itemize{

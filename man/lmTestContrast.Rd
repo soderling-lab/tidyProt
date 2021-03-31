@@ -45,5 +45,5 @@ and degrees of freedom using the student's t-distribution, \code{pt}.}
 or residual standard deviation (sigma) squared -- see also \code{?sigma}.}
 }
 \description{
-assess a contrast for a given linear model as fit by \code{lm}
+assess a contrast for a given linear model as fit by lm
 }
