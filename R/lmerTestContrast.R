@@ -10,7 +10,7 @@
 #' @param s2_prior - prior sigma squared for moderated comparison; see also 
 #' `limma::squeezeVar` to compute prior sigma squared.
 #'
-#' @returns a data.table giving the result of the model-based comparison,
+#' @return a data.table giving the result of the model-based comparison,
 #' contains the following columns:
 #' \itemize{
 #'   \item{Contrast - }{A vector defining a comparison between positive
