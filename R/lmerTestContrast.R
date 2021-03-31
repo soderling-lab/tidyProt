@@ -1,10 +1,6 @@
 #' lmerTestContrast
 #'
-#' evaluate model-based comparison given a linear mixed-model as fit by lmerTest
-#'
-#' @export lmerTestContrast
-#'
-#' @import lmerTest
+#' @description evaluate model-based comparison given a linear mixed-model as fit by lmerTest
 #'
 #' @param fm - linear mixed model fit by `lmerTest::lmer`.
 #' @param contrast - a vector indicating a contrast between model coefficients.
@@ -37,7 +33,10 @@
 #'   singular fit-- see also `?lme4::isSingular`. If `TRUE` this indicates that
 #'   one or more of the model's parameters explains little to no variance.}
 #'
+#' @import lmerTest
 #' @importFrom dplyr %>%
+#'
+#' @export lmerTestContrast
 
 lmerTestContrast <- function(fm, contrast,
                              df_prior = 0, s2_prior = 0) {
