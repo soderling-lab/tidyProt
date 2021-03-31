@@ -1,6 +1,6 @@
 #' lmTestContrast
 #'
-#' @description assess a contrast for a given linear model as fit by lm
+#' evaluate a contrast for a given linear model as fit by lm
 #'
 #' @param fm - fit linear model 
 #'
