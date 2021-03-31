@@ -26,6 +26,11 @@ lmTestContrast(fm, LT, s2_prior = 0, df_prior = 0)
 See the \code{getContrast} function to create a contrast.
 }}
 }
+\value{
+a \code{data.frame} containing the result for the comparison
+
+can I have multiple return statments?
+}
 \description{
 assess a contrast for a given linear model as fit by \code{lm}
 }

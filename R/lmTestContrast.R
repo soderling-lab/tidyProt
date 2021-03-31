@@ -13,6 +13,9 @@
 #' @param s2_prior - prior sigma squared for moderated comparison; see also 
 #' `sigma`.
 #'
+#' @return a `data.frame` containing the result for the comparison
+#' @return can I have multiple return statments?
+#'
 #' @export lmTestContrast
 
 lmTestContrast <- function(fm, LT, 
