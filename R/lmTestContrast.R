@@ -12,24 +12,6 @@
 #'
 #' @param s2_prior - prior sigma squared for moderated comparison; see also 
 #'
-#' @return a data.table giving the result of the model-based comparison,
-#' contains the following columns:
-#' \itemize{
-#'   \item{Contrast - }{A vector defining a comparison between positive
-#'   and negative coefficients in a model. See also, `getContrast`.}
-#'   \item{log2FC - }{The fold change estimated from the fit model.}
-#'   \item{percentControl}{The fold-change converted to a percentage of the
-#'   control.}
-#'   \item{SE - }{The standard error of the comparison computed as the square
-#'   root of the variance.}
-#'   \item{Tstatistic - }{The t-statistic for the comparison, calculated using
-#'   equation 11 from Kuznetsova et al., 2017.}
-#'   \item{Pvalue - }{The p-value for the comparison, calculated from the t-value
-#'   and degrees of freedom using the student's t-distribution, `pt`.}
-#'   \item{DF - }{The degrees of freedom for the comparison.}
-#'   \item{S2 - }{sigma squared -- the estimated standard deviation of the errors
-#'   or residual standard deviation (sigma) squared -- see also `?sigma`.}
-#'
 #' @export lmTestContrast
 
 lmTestContrast <- function(fm, LT, 
