@@ -2,16 +2,6 @@
 #'
 #' evaluate a contrast for a given linear model as fit by lm
 #'
-#' @param fm - fit linear model 
-#'
-#' @param contrast - a vector indicating a contrast between model coefficients.
-#' See the `getContrast` function to create a contrast.
-#'
-#' @param df_prior - prior degrees of freedom for moderated comparison; see also
-#' `limma::squeezeVar` to compute prior degrees of freedom.
-#'
-#' @param s2_prior - prior sigma squared for moderated comparison; see also 
-#'
 #' @export lmTestContrast
 
 lmTestContrast <- function(fm, LT, 

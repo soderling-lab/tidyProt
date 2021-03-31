@@ -6,25 +6,6 @@
 \usage{
 lmTestContrast(fm, LT, s2_prior = 0, df_prior = 0)
 }
-\arguments{
-\item{fm}{\itemize{
-\item fit linear model
-}}
-
-\item{s2_prior}{\itemize{
-\item prior sigma squared for moderated comparison; see also
-}}
-
-\item{df_prior}{\itemize{
-\item prior degrees of freedom for moderated comparison; see also
-\code{limma::squeezeVar} to compute prior degrees of freedom.
-}}
-
-\item{contrast}{\itemize{
-\item a vector indicating a contrast between model coefficients.
-See the \code{getContrast} function to create a contrast.
-}}
-}
 \description{
 evaluate a contrast for a given linear model as fit by lm
 }
