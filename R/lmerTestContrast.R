@@ -3,14 +3,45 @@
 #' @description evaluate model-based comparison given a linear mixed-model as fit by lmerTest
 #'
 #' @param fm - linear mixed model fit by `lmerTest::lmer`.
+#'
 #' @param contrast - a vector indicating a contrast between model coefficients.
 #' See the `getContrast` function to create a contrast.
+#'
 #' @param df_prior - prior degrees of freedom for moderated comparison; see also
 #' `limma::squeezeVar` to compute prior degrees of freedom.
+#'
 #' @param s2_prior - prior sigma squared for moderated comparison; see also 
 #' `limma::squeezeVar` to compute prior sigma squared.
 #'
+#' @return a `data.frame` containing the result for the comparison and the
+#' following columns:
+#'
+#' @return `Contrast` - indicates the comparison between model coefficients.
+#'
+#' @return `log2FC` - the fold change estimated from the fit model.
+#'
+#' @return `percentControl` - the fold-change converted to a percent relative to
+#'   the control (positive) coefficient.
+#'
+#' @return `SE` - the standard error of the comparison computed as the square
+#'   root of the variance.
+#'
+#' @return `Tstatistic` - the t-statistic for the comparison, calculated using
+#'   equation (11) from Kuznetsova et al., 2017.
+#'
+#' @return `Pvalue` - the p-value for the comparison, calculated from the t-value
+#'   and degrees of freedom using the student's t-distribution, `pt`.
+#'
+#' @return `DF` - the degrees of freedom for the comparison.
+#'
+#' @return `S2` - sigma squared -- the estimated standard deviation of the errors
+#'   or residual standard deviation (sigma) squared -- see also `?sigma`.
+#'
+#' @return `isSingular` - see also `lme4::isSingular`. If `TRUE` this indicates
+#' that one or more of the model's parameters explains little to no variance.
+#'
 #' @import lmerTest
+#'
 #' @importFrom dplyr %>%
 #'
 #' @export lmerTestContrast
