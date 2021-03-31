@@ -15,17 +15,25 @@
 #'
 #' @return a `data.frame` containing the result for the comparison and the
 #' following columns:
+#'
 #' @return `Contrast` - indicates the comparison between model coefficients.
+#'
 #' @return `log2FC` - the fold change estimated from the fit model.
+#'
 #' @return `percentControl` - the fold-change converted to a percent relative to
 #'   the control (positive) coefficient.
+#'
 #' @return `SE` - the standard error of the comparison computed as the square
 #'   root of the variance.
+#'
 #' @return `Tstatistic` - the t-statistic for the comparison, calculated using
 #'   equation (11) from Kuznetsova et al., 2017.
+#'
 #' @return `Pvalue` - the p-value for the comparison, calculated from the t-value
 #'   and degrees of freedom using the student's t-distribution, `pt`.
+#'
 #' @return `DF` - the degrees of freedom for the comparison.
+#'
 #' @return `S2` - sigma squared -- the estimated standard deviation of the errors
 #'   or residual standard deviation (sigma) squared -- see also `?sigma`.
 #'
