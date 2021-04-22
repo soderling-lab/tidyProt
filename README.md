@@ -6,7 +6,7 @@ To install the `tidyProt` package, type the following into an R console:
 
 
 ## Key Dependencies
-Beforing installing `tidyProt`, insure that you have installed the following R
+Before installing `tidyProt`, insure that you have installed the following R
 packages:
 
 * lmerTest `install.packages("lmerTest")`
