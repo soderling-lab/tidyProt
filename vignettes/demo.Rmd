@@ -1,0 +1,50 @@
+---
+title: "tidyProt Demo"
+author:
+- name: Tyler W. A. Bradshaw
+  affiliation: Duke University, Department of Neurobiology
+output:
+  BiocStyle::html_document:
+    toc_float: true
+  BiocStyle::pdf_document: default
+package: tidyProt
+abstract: |
+  Demonstrating usage of tidyProt.
+vignette: |
+  %\VignetteIndexEntry{tidyProt Demo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Demo
+
+```{r knitr-setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, out.width="100%")
+```
+
+```{r imports, message=FALSE}
+# imports
+
+library(dplyr)
+library(tidyProt) # soderling-lab/tidyProt
+```
+
+```{r demo}
+
+# load the iPSD BioID data
+
+# devtools::install_github("soderling-lab/Uezu")
+data(ipsd_bioid, package="Uezu2016") 
+
+
+# fit a simple linear model
+fx <- log2(Intensity) ~ 0 + Condition
+fm <- lm(fx, ipsd_bioid %>% subset(Symbol == "Gphn"))
+
+# create a contrast for Gephyrin BioID versus control
+LT <- getContrast(fm,"Gephyrin","ConditionControl")
+
+# assess contrast
+lmTestContrast(fm, LT) %>% knitr::kable()
+
+```
