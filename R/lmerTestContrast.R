@@ -1,7 +1,7 @@
 #' lmerTestContrast
 #'
 #' @description evaluate model-based comparison given a linear mixed-model as
-#' fit by \insertRef{Kuznetsova2017}{lmerTest}
+#' fit by \insertRef{Kuznetsova2017}{tidyProt}
 #'
 #' @param fm - linear mixed model fit by `lmerTest::lmer`.
 #'
