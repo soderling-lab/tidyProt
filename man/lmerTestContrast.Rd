@@ -55,5 +55,6 @@ or residual standard deviation (sigma) squared -- see also \code{?sigma}.
 that one or more of the model's parameters explains little to no variance.
 }
 \description{
-evaluate model-based comparison given a linear mixed-model as fit by lmerTest
+evaluate model-based comparison given a linear mixed-model as
+fit by \insertRef{Kuznetsova2017}{lmerTest}
 }
